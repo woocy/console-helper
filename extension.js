@@ -86,12 +86,12 @@ const insertLogStatement = context => {
             const isShowSemi = getSettingValue('Show Semi')
             let logToInsert = ''
             if (prefixLogo) {
-              const showSemi = `console.log('%c${prefixLogo}-[ ${str} ]: ', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text});`
-              const notShowSemi = `console.log('%c${prefixLogo}-[ ${str} ]: ', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text})`
+              const showSemi = `console.log('%c${prefixLogo}-[ ${str} ]', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text});`
+              const notShowSemi = `console.log('%c${prefixLogo}-[ ${str} ]', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text})`
               logToInsert = isShowSemi ? showSemi : notShowSemi
             } else {
-              const showSemi = `console.log('%c[ ${str} ]: ', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text});`
-              const notShowSemi = `console.log('%c[ ${str} ]: ', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text})`
+              const showSemi = `console.log('%c[ ${str} ]', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text});`
+              const notShowSemi = `console.log('%c[ ${str} ]', 'color: ${color}; background: ${colorBg}; font-size: ${fontSize};', ${text})`
               logToInsert = isShowSemi ? showSemi : notShowSemi
             }
             insertText(logToInsert)
